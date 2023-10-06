@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
 
     const signIn = (email, password) => {
         setLoading(true);
-        signInWithEmailAndPassword(auth, email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
@@ -52,7 +52,11 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.any
+    children: PropTypes.node.isRequired,
 }
+
+// AuthProvider.propTypes = {
+//     children: Node
+// }
 
 export default AuthProvider;

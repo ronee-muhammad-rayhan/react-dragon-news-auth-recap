@@ -19,7 +19,7 @@ const NewsCard = ({ news }) => {
 };
 
 NewsCard.propTypes = {
-    news: PropTypes.any
+    news: PropTypes.object
 }
 
 export default NewsCard;
